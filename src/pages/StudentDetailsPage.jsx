@@ -4,7 +4,7 @@ import studentsData from "./../assets/students.json";
 import { useParams } from "react-router-dom";
 
 function StudentDetailsPage() {
-  const studentId = useParams().studentId;
+  const { studentId } = useParams();
   const studentProfile = studentsData.find(
     (student) => student._id === studentId
   );
